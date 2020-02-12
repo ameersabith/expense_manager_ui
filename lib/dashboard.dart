@@ -7,7 +7,7 @@ class DashboardPage extends StatefulWidget {
 }
   
 class _DashboardPageState extends State<DashboardPage> {
-  Color primaryColor = Color.fromRGBO(255, 82, 48, 1);
+  Color primaryColor = Color.fromRGBO(22, 155, 155, 1);
 
   @override
   Widget build(BuildContext context) {
@@ -18,7 +18,7 @@ class _DashboardPageState extends State<DashboardPage> {
       ClickPerMonth('Mar', 54, Colors.purple),
       ClickPerMonth('Apr', 20, Colors.blue),
       ClickPerMonth('May', 76, Colors.purple),
-      ClickPerMonth('Apr', 35, Colors.blue)
+      ClickPerMonth('Jun', 35, Colors.blue),
     ];
 
     var series = [
@@ -26,7 +26,8 @@ class _DashboardPageState extends State<DashboardPage> {
         id: 'Clicks',
         data: data, 
         domainFn: (ClickPerMonth clickData, _) => clickData.month,
-        measureFn: (ClickPerMonth clickData, _) => clickData.clicks
+        measureFn: (ClickPerMonth clickData, _) => clickData.clicks,
+        colorFn: (ClickPerMonth clickData, _) => clickData.color
       )
     ];
 
@@ -88,7 +89,7 @@ class _DashboardPageState extends State<DashboardPage> {
                 width: double.infinity,
                 height: 370.0,
                 decoration: BoxDecoration(
-                  color: primaryColor,
+                  color: Colors.grey.withOpacity(0.9),
                   borderRadius: BorderRadius.all(Radius.circular(20.0)),
                   boxShadow: [
                     BoxShadow(
@@ -186,15 +187,13 @@ class _DashboardPageState extends State<DashboardPage> {
                                 style: TextStyle(
                                   color: Colors.black,
                                   fontSize: 18.0,
-                                  fontWeight: FontWeight.bold
                                 )
                               ),
                               Text(
                                 'Sent Money',
                                 style: TextStyle(
-                                  color: Colors.black.withOpacity(0.8),
+                                  color: Colors.grey,
                                   fontSize: 16.0,
-                                  fontWeight: FontWeight.bold
                                 )
                               )
                             ],
@@ -205,7 +204,6 @@ class _DashboardPageState extends State<DashboardPage> {
                           style: TextStyle(
                           color: Colors.black,
                           fontSize: 18.0,
-                          fontWeight: FontWeight.bold
                           )
                         )
                       ]
@@ -229,7 +227,6 @@ class _DashboardPageState extends State<DashboardPage> {
                               style: TextStyle(
                                 color: Colors.orange,
                                 fontSize: 24.0,
-                                fontWeight: FontWeight.bold
                               )
                             ),
                           ),
@@ -244,15 +241,13 @@ class _DashboardPageState extends State<DashboardPage> {
                                 style: TextStyle(
                                   color: Colors.black,
                                   fontSize: 18.0,
-                                  fontWeight: FontWeight.bold
                                 )
                               ),
                               Text(
                                 'Sent Money',
                                 style: TextStyle(
-                                  color: Colors.black.withOpacity(0.8),
+                                  color: Colors.grey,
                                   fontSize: 16.0,
-                                  fontWeight: FontWeight.bold
                                 )
                               )
                             ],
@@ -263,7 +258,6 @@ class _DashboardPageState extends State<DashboardPage> {
                           style: TextStyle(
                           color: Colors.black,
                           fontSize: 18.0,
-                          fontWeight: FontWeight.bold
                           )
                         )
                       ]

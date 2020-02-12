@@ -26,7 +26,7 @@ class _MyHomePageState extends State<MyHomePage> {
 
   @override
   Widget build(BuildContext context) {
-    Color primaryColor = Color.fromRGBO(255, 82, 48, 1);
+    Color primaryColor = Color.fromRGBO(22, 155, 155, 1);
 
     return Scaffold(
       backgroundColor: Color.fromRGBO(244, 244, 244, 1),
